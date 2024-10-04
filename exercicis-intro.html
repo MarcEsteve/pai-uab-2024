@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicis Introducció a JavaScript</title>
     <style>
-        h1 {
-            /* color: blue; */
-        }
+      h1 {
+        color: blue;
+        /* color: green; Comentari CSS*/
+      }
     </style>
-    
-</head>
-<body>
-    <!-- 1.1.- Digues quins d'aquests noms de variables són correctes i quins no. 
-     1. variAble 
-     2. Variable 
-     3. vari-able 
-     4. vari_able 
-     5. _variable 
-     6. vari.able 
-     7. vari4able 
-     8. 4variable 
-     9. variable4 
-     10. variable_4 
-     11. LaMevaVariable  -->
-     <script>
-        // window.alert('Hola mon');
-     </script>
-</body>
+  </head>
+  <body>
+    <h1>Exercicis Introducció a JavaScript</h1>
+    <h2>Variables - Noms de variables</h2>
+    <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae vero assumenda omnis odio, eaque, nostrum natus ullam veniam ducimus recusandae iste ab voluptates vitae eveniet ratione ad dicta quibusdam nam.</p>  Comentari HTML-->
+    <h3>
+      1.1.- Digues quins d'aquests noms de variables són correctes i quins no.
+    </h3>
+    <pre>        1. <span style="color: green;">variAble</span>
+        2. <span style="color: green;">Variable</span>
+        3. <span style="color: red;">vari-able</span>
+        4. <span style="color: green;">vari_able</span>
+        5. <span style="color: green;">_variable</span>
+        6. <span style="color: red;">vari.able</span>
+        7. <span style="color: green;">vari4able</span>
+        8. <span style="color: red;">4variable</span>
+        9. <span style="color: green;">variable4</span>
+        10. <span style="color: green;">variable_4</span>
+        11. <span style="color: green;">LaMevaVariable</span>
+    </pre>
+    <h3>
+      1.2.- Volem guardar a una variable el nom d'un empleat. Quin d'aquests
+      noms de variable seria el més addient?
+    </h3>
+    <pre>
+        1. nomempleat 
+        2. Nomempleat 
+        3. NomEmpleat 
+        4. <span style="color: green;">nomEmpleat (convenció camelCase)</span>
+        5. Nom_empleat 
+        6. _NomEmpleat 
+        7. nomEmpleat0 
+        8. <span style="color: green;">nom_empleat (convenció snake_case)</span> 
+        9. nom0empleat 
+        10. Nom empleat 
+    </pre>
+    <h2>Variables - Declaració</h2>
+    <h3>2.1.- Què passaria si féssim aquestes declaracions de variables?</h3>
+    <p>
+      Pensa primer que creus que passaria. Després pots provar a executar
+      aquestes instruccions i veure que passa (si passa alguna cosa).
+    </p>
+    a.- var a = 1; var a = 2; console.log(a);
+    <p>Cap problema perque pots mencionar dos cops la paraula clau var</p>
+    <script>
+      var a = 1;
+      var a = 2;
+      console.log(a);
+    </script>
+    <script>
+      // window.alert('Hola mon'); Comentari JavaScript
+    </script>
+  </body>
 </html>
