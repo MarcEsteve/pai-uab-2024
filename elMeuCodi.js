@@ -2,3 +2,11 @@
 window.onload = function() {
     alert('Hola Món');
 };
+
+var carrer = 'C/ de les "Sitges", 1';
+let elMeuNum = 5;
+console.log(elMeuNum);
+// elMeuNum++ ; // elMeuNum val 6 
+console.log(++elMeuNum);
+elMeuNum-- ; // elMeuNum val 5
+console.log(elMeuNum);
