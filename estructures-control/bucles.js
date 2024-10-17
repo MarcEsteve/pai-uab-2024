@@ -29,3 +29,21 @@ if (entradaUsuari === contrasenyaCorrecta) {
 } else {
   console.log("Has superat el nombre d'intents permesos.");
 }
+
+// FOR
+
+let text = "";
+// let i;
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    break;
+  }
+  text += "El número és " + i + "<br>";
+}
+document.write(text); //al final, es mostra per pantalla fins el número 2...
+
+// FOR amb titulars
+
+for (let i = 1; i <= 6; i++) {
+  document.write("<h" + i + ">Aquest és un títol h" + i + "</h" + i + ">");
+}
