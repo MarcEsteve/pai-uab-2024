@@ -120,23 +120,73 @@ sdgfdsf
 
 // 14.8.- Escriu un programa que simuli la compra a una web. L’usuari haurà d’introduir una quantitat (el que cal pagar) per teclat fent servir la instrucció prompt. En cas que la quantitat sigui 30€ o més, es mostrarà a la consola un missatge indicant que el cost total és de 30€ donat que el transport és gratis. En cas que la quantitat sigui inferior a 30€, es mostrarà un missatge dient el preu total que consistirà en l’introduït més 4.95€ en concepte de cost d’enviament.
 
-// Demanem a l'usuari la quantitat a pagar
-let quantitat = parseFloat(prompt("Introdueix l'import de la teva compra:"));
+// // Demanem a l'usuari la quantitat a pagar
+// let quantitat = parseFloat(prompt("Introdueix l'import de la teva compra:"));
 
-// Condicionals per calcular el cost total amb o sense enviament
-if (quantitat >= 30) {
-  console.log("El cost total és de " + quantitat +" donat que el transport és gratuït.");
-} else {
-  let costEnviament = 4.95;
-  let total = quantitat + costEnviament;
-  console.log(
-    "El cost total és de " +
-      total.toFixed(2) +
-      "€ (amb " +
-      costEnviament +
-      "€ d'enviament)."
-  );
-}
+// // Condicionals per calcular el cost total amb o sense enviament
+// if (quantitat >= 30) {
+//   console.log("El cost total és de " + quantitat +" donat que el transport és gratuït.");
+// } else {
+//   let costEnviament = 4.95;
+//   let total = quantitat + costEnviament;
+//   console.log(
+//     "El cost total és de " +
+//       total.toFixed(2) +
+//       "€ (amb " +
+//       costEnviament +
+//       "€ d'enviament)."
+//   );
+// }
+
+// 14.9
+
+// // Demanem a l'usuari si vol un conus o una terrina
+// let tipusGelat = prompt("Vols un conus (c) o una terrina (t)?").toLowerCase();
+
+// // Demanem a l'usuari quin sabor vol
+// let saborGelat = prompt(
+//   "Tria un sabor: Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Ametlles"
+// ).toLowerCase();
+
+// // Variables per al cost del gelat
+// let costBase = 0;
+// let costFinal = 0;
+// let error = false;
+
+// // Comprovem el tipus de gelat i assignem el cost base
+// if (tipusGelat === "c") {
+//   costBase = 3.45;
+// } else if (tipusGelat === "t") {
+//   costBase = 3.95;
+// } else {
+//   error = true;
+// }
+
+// // Comprovem el sabor i afegim el suplement si cal
+// if (saborGelat === "vainilla" || saborGelat === "xocolata") {
+//   costFinal = costBase; // Sense afegir cost extra
+// } else if (
+//   saborGelat === "turró" ||
+//   saborGelat === "menta" ||
+//   saborGelat === "oreo"
+// ) {
+//   costFinal = costBase + 0.5; // Afegim 0.5€
+// } else if (
+//   saborGelat === "crema" ||
+//   saborGelat === "gerds" ||
+//   saborGelat === "ametlles"
+// ) {
+//   costFinal = costBase + 1; // Afegim 1€
+// } else {
+//   error = true;
+// }
+
+// // Si totes les dades són correctes, es mostra el preu final
+// if (!error) {
+//   console.log("El preu final del teu gelat és: " + costFinal.toFixed(2) + "€");
+// } else {
+//   console.log("Error dades mal introduïdes");
+// }
 
 // SWITCH
 
@@ -184,3 +234,51 @@ if (quantitat >= 30) {
 //     console.log("Mes no vàlid");
 //     break;
 // }
+
+// 15.2
+// Demanem a l'usuari si vol un conus o una terrina
+let tipusGelat = prompt("Vols un conus (c) o una terrina (t)?").toLowerCase();
+
+// Demanem a l'usuari quin sabor vol
+let saborGelat = prompt(
+  "Tria un sabor: Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Ametlles"
+).toLowerCase();
+
+// Variables per al cost del gelat
+let costBase = 0;
+let increment = 0;
+let costFinal = 0;
+
+// Comprovem el tipus de gelat i assignem el cost base
+if (tipusGelat === "c") {
+  costBase = 3.45;
+} else if (tipusGelat === "t") {
+  costBase = 3.95;
+} else {
+  console.log("Error dades mal introduïdes del tipus de gelat");
+}
+
+// Utilitzem switch per calcular l'increment segons el sabor
+switch (saborGelat) {
+  case "vainilla":
+  case "xocolata":
+    increment = 0; // Sense increment
+    break;
+  case ("turró", "menta", "oreo"):
+    increment = 0.5; // Increment de 0.5€
+    break;
+  case "crema":
+  case "gerds":
+  case "ametlles":
+    increment = 1; // Increment de 1€
+    break;
+  default:
+    console.log("Error dades mal introduïdes de sabor");
+    break;
+}
+
+// Calculem el preu final si les dades són correctes
+if (costBase > 0 && increment >= 0) {
+  costFinal = costBase + increment;
+  console.log("El preu final del teu gelat és: " + costFinal.toFixed(2) + "€");
+}
