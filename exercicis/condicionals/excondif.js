@@ -28,11 +28,16 @@ sdgfdsf
 //     document.getElementById('resposta2').innerHTML = "El número llegit és senar";
 // }
 
-// 14.3.- Escriu un programa que, donat dos números llegits amb prompt, escrigui a la consola quin és el més gran. Només pots fer servir una instrucció if-else. 
+// 14.3.- Escriu un programa que, donat dos números llegits amb prompt, escrigui a la consola quin és el més gran. Només pots fer servir una instrucció if-else.
 
 let num1 = parseInt(prompt("Escriu el primer número"));
 let num2 = parseInt(prompt("Escriu el segon número"));
 
+if (num1 < num2) {
+  console.log("El número més gran es el segon: " + num2);
+} else {
+  console.log("El número més gran es el primer: " + num1);
+}
 
 // SWITCH
 
@@ -80,4 +85,3 @@ let num2 = parseInt(prompt("Escriu el segon número"));
 //     console.log("Mes no vàlid");
 //     break;
 // }
-
