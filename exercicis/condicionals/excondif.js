@@ -30,13 +30,77 @@ sdgfdsf
 
 // 14.3.- Escriu un programa que, donat dos números llegits amb prompt, escrigui a la consola quin és el més gran. Només pots fer servir una instrucció if-else.
 
-let num1 = parseInt(prompt("Escriu el primer número"));
-let num2 = parseInt(prompt("Escriu el segon número"));
+// let num1 = parseInt(prompt("Escriu el primer número"));
+// let num2 = parseInt(prompt("Escriu el segon número"));
 
-if (num1 < num2) {
-  console.log("El número més gran es el segon: " + num2);
+// if (num1 < num2) {
+//   console.log("El número més gran es el segon: " + num2);
+// } else {
+//   console.log("El número més gran es el primer: " + num1);
+// }
+
+// 14.4.- Escriu un programa que, donat tres números llegits amb prompt, escrigui a la consola quin es el més gran. Pista. Comprova si el primer número llegit és el més gran. Si no és així, comprova si el més gran és el segon. Si tampoc ho és, el més gran, sens dubte, serà el tercer.
+
+// // Llegim tres números amb prompt
+// let num1 = parseFloat(prompt("Introdueix el primer número:"));
+// let num2 = parseFloat(prompt("Introdueix el segon número:"));
+// let num3 = parseFloat(prompt("Introdueix el tercer número:"));
+
+// // Comprova quin és el més gran
+// if (num1 >= num2 && num1 >= num3) {
+//     console.log("El número més gran és: " + num1);
+// } else if (num2 >= num1 && num2 >= num3) {
+//     console.log("El número més gran és: " + num2);
+// } else {
+//     console.log("El número més gran és: " + num3);
+// }
+
+// 14.5.- Escriu un programa que, donats tres números llegits amb prompt, escrigui a la consola els tres números ordenats.
+
+// // Llegim tres números amb prompt
+// let num1 = parseFloat(prompt("Introdueix el primer número:"));
+// let num2 = parseFloat(prompt("Introdueix el segon número:"));
+// let num3 = parseFloat(prompt("Introdueix el tercer número:"));
+
+// // Comprovem i ordenem els números
+// if (num1 <= num2 && num1 <= num3) {
+//     if (num2 <= num3) {
+//         console.log(num1 + ", " + num2 + ", " + num3);
+//     } else {
+//         console.log(num1 + ", " + num3 + ", " + num2);
+//     }
+// } else if (num2 <= num1 && num2 <= num3) {
+//     if (num1 <= num3) {
+//         console.log(num2 + ", " + num1 + ", " + num3);
+//     } else {
+//         console.log(num2 + ", " + num3 + ", " + num1);
+//     }
+// } else {
+//     if (num1 <= num2) {
+//         console.log(num3 + ", " + num1 + ", " + num2);
+//     } else {
+//         console.log(num3 + ", " + num2 + ", " + num1);
+//     }
+// }
+
+// 14.6.- En un control d’alcoholèmia necessiten un programa que els hi digui si una persona pot conduir o no. El programa demanarà dues dades: Si la persona té carnet de conduir i el valor que ha sortit a la prova d’alcoholèmia. El programa ha de respondre que sí pot conduir si té carnet de conduir i la prova d’alcoholèmia ha donat un valor inferior a 0.25
+
+// Preguntem si la persona té carnet de conduir (sí o no)
+let teCarnet = prompt("Tens carnet de conduir? (si/no)").toLowerCase();
+
+// Comprovem si pot conduir
+if (teCarnet === "si") {
+  // Demanem el valor de la prova d'alcoholèmia
+  let alcohol = parseFloat(
+    prompt("Quin és el valor de la prova d'alcoholèmia?")
+  );
+  if (alcohol < 0.25) {
+    console.log("Si, pots conduir.");
+  } else {
+    console.log("No, no pots conduir.");
+  }
 } else {
-  console.log("El número més gran es el primer: " + num1);
+  console.log("No, no pots conduir.");
 }
 
 // SWITCH
