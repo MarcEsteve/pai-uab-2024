@@ -85,22 +85,57 @@ sdgfdsf
 
 // 14.6.- En un control d’alcoholèmia necessiten un programa que els hi digui si una persona pot conduir o no. El programa demanarà dues dades: Si la persona té carnet de conduir i el valor que ha sortit a la prova d’alcoholèmia. El programa ha de respondre que sí pot conduir si té carnet de conduir i la prova d’alcoholèmia ha donat un valor inferior a 0.25
 
-// Preguntem si la persona té carnet de conduir (sí o no)
-let teCarnet = prompt("Tens carnet de conduir? (si/no)").toLowerCase();
+// // Preguntem si la persona té carnet de conduir (sí o no)
+// let teCarnet = prompt("Tens carnet de conduir? (si/no)").toLowerCase();
 
-// Comprovem si pot conduir
-if (teCarnet === "si") {
-  // Demanem el valor de la prova d'alcoholèmia
-  let alcohol = parseFloat(
-    prompt("Quin és el valor de la prova d'alcoholèmia?")
-  );
-  if (alcohol < 0.25) {
-    console.log("Si, pots conduir.");
-  } else {
-    console.log("No, no pots conduir.");
-  }
+// // Comprovem si pot conduir
+// if (teCarnet === "si") {
+//   // Demanem el valor de la prova d'alcoholèmia
+//   let alcohol = parseFloat(
+//     prompt("Quin és el valor de la prova d'alcoholèmia?")
+//   );
+//   if (alcohol < 0.25) {
+//     console.log("Si, pots conduir.");
+//   } else {
+//     console.log("No, no pots conduir.");
+//   }
+// } else {
+//   console.log("No, no pots conduir.");
+// }
+
+// 13.7.- Escriu un programa que, donat dos números llegits amb prompt, escrigui a la consola el resultat de restar al nombre més gran el nombre més petit.
+
+// // Llegim dos números amb prompt
+// let num1 = parseFloat(prompt("Introdueix el primer número:"));
+// let num2 = parseFloat(prompt("Introdueix el segon número:"));
+
+// // Comprovem quin és el més gran i fem la resta
+// if (num1 > num2) {
+//     console.log("El resultat de restar el nombre més petit del més gran és: " + (num1 - num2));
+// } else if (num2 > num1) {
+//     console.log("El resultat de restar el nombre més petit del més gran és: " + (num2 - num1));
+// } else {
+//     console.log("Els dos nombres són iguals, la resta és 0.");
+// }
+
+// 14.8.- Escriu un programa que simuli la compra a una web. L’usuari haurà d’introduir una quantitat (el que cal pagar) per teclat fent servir la instrucció prompt. En cas que la quantitat sigui 30€ o més, es mostrarà a la consola un missatge indicant que el cost total és de 30€ donat que el transport és gratis. En cas que la quantitat sigui inferior a 30€, es mostrarà un missatge dient el preu total que consistirà en l’introduït més 4.95€ en concepte de cost d’enviament.
+
+// Demanem a l'usuari la quantitat a pagar
+let quantitat = parseFloat(prompt("Introdueix l'import de la teva compra:"));
+
+// Condicionals per calcular el cost total amb o sense enviament
+if (quantitat >= 30) {
+  console.log("El cost total és de " + quantitat +" donat que el transport és gratuït.");
 } else {
-  console.log("No, no pots conduir.");
+  let costEnviament = 4.95;
+  let total = quantitat + costEnviament;
+  console.log(
+    "El cost total és de " +
+      total.toFixed(2) +
+      "€ (amb " +
+      costEnviament +
+      "€ d'enviament)."
+  );
 }
 
 // SWITCH
