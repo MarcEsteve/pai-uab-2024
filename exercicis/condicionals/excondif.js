@@ -28,6 +28,12 @@ sdgfdsf
 //     document.getElementById('resposta2').innerHTML = "El número llegit és senar";
 // }
 
+// 14.3.- Escriu un programa que, donat dos números llegits amb prompt, escrigui a la consola quin és el més gran. Només pots fer servir una instrucció if-else. 
+
+let num1 = parseInt(prompt("Escriu el primer número"));
+let num2 = parseInt(prompt("Escriu el segon número"));
+
+
 // SWITCH
 
 // 15.1.- Fent servir la instrucció switch escriu un programa que donat amb prompt un número de mes, entre 1 i 12, escrigui per pantalla el nom del mes que correspon.
@@ -75,19 +81,3 @@ sdgfdsf
 //     break;
 // }
 
-// FOR
-// 16.1.- Escriu, fent servir la instrucció for, un programa que escrigui a la consola 10 cops el text “Estem fent bucles”.
-
-for (let i = 1; i <= 10; i++) {
-  console.log("Estem fent bucles");
-}
-
-// WHILE
-//17.1
-let j = 1,
-  text = "";
-while (j <= 10) {
-  text += "Estem fent bucles</br>";
-  document.getElementById("resposta1").innerHTML = text;
-  j++;
-}
