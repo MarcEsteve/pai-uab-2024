@@ -29,7 +29,7 @@
 
     <p><strong>Explicació del combinador de descendents:</strong></p>
     <p>
-      El combinador de descendents (<code>&nbsp;</code>) s’utilitza quan en CSS
+      El combinador de descendents (<code>&nbsp;</code>) s'utilitza quan en CSS
       escrivim dos selectors (com <code>section</code> i <code>p</code>) un al
       costat de l'altre amb un espai entre ells. Aquest combinador selecciona
       els elements que són <strong>descendents</strong> del primer element.
@@ -72,27 +72,32 @@
     <h2>Com utilitzar un atribut <code>id</code> en CSS</h2>
     <p>Quan tenim un element HTML amb un atribut <code>id</code>, com ara:</p>
 
-    <pre><code>&lt;p id="remark"&gt;Aquest és un paràgraf especial&lt;/p&gt;</code></pre>
+    <pre>
+        <code>&lt;p id="remark"&gt;Aquest és un paràgraf especial&lt;/p&gt;</code>
+    </pre>
 
     <p>
       Podem referir-nos a aquest identificador en CSS fent servir el símbol de
       la <strong>almoadilla (#)</strong> seguit de l'<code>id</code>. Això ens
       permet aplicar estils específics a aquest element concret. En aquest cas,
-      l’estil per a l’element amb <code>id="remark"</code> es defineix com:
+      l'estil per a l'element amb <code>id="remark"</code> es defineix com:
     </p>
 
-    <pre><code>#remark {
+    <pre>
+<code>#remark {
     color: darkgreen;
     font-weight: bold;
     background-color: lightyellow;
     padding: 5px;
     border: 1px solid green;
     border-radius: 3px;
-}</code></pre>
+}</code>
+    </pre>
 
     <h2>Exemple visual:</h2>
     <p id="remark">
-      Aquest és un paràgraf especial que utilitza l’atribut id "remark".
+      Aquest és un paràgraf especial que utilitza l'atribut id "remark".
     </p>
+    <script src="problemes.js"></script>
   </body>
 </html>
