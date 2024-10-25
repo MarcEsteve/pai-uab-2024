@@ -22,6 +22,9 @@
         border: 1px solid green;
         border-radius: 3px;
       }
+      .header2 {
+        color:red;
+      }
     </style>
   </head>
   <body>
@@ -37,7 +40,7 @@
       els elements que són <strong>descendents</strong> del primer element.
     </p>
 
-    <h2>Relació entre <code>section</code> i <code>p</code>:</h2>
+    <h2 class="header2">Relació entre <code>section</code> i <code>p</code>:</h2>
     <p>
       En aquest exemple, <code>section p</code> selecciona tots els elements
       &lt;p&gt; que es troben dins d'un element &lt;section&gt;. Això vol dir
@@ -46,13 +49,13 @@
       per aquesta regla.
     </p>
 
-    <h2>Exemple visual de la relació:</h2>
+    <h2 class="header2">Exemple visual de la relació:</h2>
     <section>
       <p>Aquest paràgraf és dins d'una secció.</p>
     </section>
     <p>Aquest paràgraf no és dins d'una secció.</p>
 
-    <h2>Codi CSS:</h2>
+    <h2 class="header2">Codi CSS:</h2>
     <pre>
 <code>section p { 
     background-color: blue;
@@ -100,14 +103,14 @@
     <p id="remark">
       Aquest és un paràgraf especial que utilitza l'atribut id "remark".
     </p>
-    <!-- <ol>
+    <ol>
       <li>Primer element</li>
       <li>Segon element</li>
-    </ol> -->
+    </ol>
     <ul>
       <li>Primer element</li>
       <li>Segon element</li>
     </ul>
-    <script src="problemes.js"></script>
+    <!-- <script src="problemes.js"></script> -->
   </body>
 </html>
