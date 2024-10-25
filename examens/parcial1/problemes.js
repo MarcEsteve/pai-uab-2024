@@ -36,7 +36,7 @@ if (numero2 >= 1 && numero2 <= 7) {
     console.log("Error: el número introduït ha d'estar entre 1 i 7.");
 }
 
-// OPCIÓ 2 amb if + bucle
+// OPCIÓ 2 amb if + bucle while previ
 
 let numero21 = parseInt(prompt("Introdueix un número entre 1 i 7:"));
 
@@ -59,4 +59,62 @@ if (numero21 === 1) {
     console.log("Dissabte");
 } else if (numero21 === 7) {
     console.log("Diumenge");
+}
+
+// OPCIÓ 3 amb switch + bucle for previ
+
+let numero22;
+
+for (;;) {  // Bucle infinit
+    numero22 = parseInt(prompt("Introdueix un número entre 1 i 7:"));
+    if (numero22 >= 1 && numero22 <= 7) {
+        break;  // Sortim del bucle si el número és vàlid
+    } else {
+        console.log("Error! Introdueix un número entre 1 i 7:");
+    }
+}
+
+switch (numero22) {
+    case 1:
+        console.log("Dilluns");
+        break;
+    case 2:
+        console.log("Dimarts");
+        break;
+    case 3:
+        console.log("Dimecres");
+        break;
+    case 4:
+        console.log("Dijous");
+        break;
+    case 5:
+        console.log("Divendres");
+        break;
+    case 6:
+        console.log("Dissabte");
+        break;
+    case 7:
+        console.log("Diumenge");
+        break;
+}
+
+
+// 3.- (2 punts) Escriu un programa en JavaScript que demani a l'usuari un número N i mostri a la consola tots els números de l'1 fins a N. Pots fer-ho utilitzant tant un bucle for com un bucle while.
+
+// Opció amb FOR
+
+let nFor = parseInt(prompt("Introdueix un número N:"));
+
+for (let i = 1; i <= nFor; i++) {
+    console.log(i);
+}
+
+// Opció amb WHILE
+
+let nWhile = parseInt(prompt("Introdueix un número N:"));
+let i = 1;
+
+while (i <= nWhile) {
+    console.log(i);
+    i++;
 }
