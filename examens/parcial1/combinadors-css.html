@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemple del combinador de descendents en CSS</title>
+    <style>
+      /* Aplicar fons blau només als paràgrafs dins de <section> */
+      section p {
+        background-color: blue;
+        color: white; /* Text blanc per fer contrast amb el fons blau */
+        padding: 5px;
+        border-radius: 3px;
+      }
+
+      /* Estil per a un element amb l'id "remark" */
+      #remark {
+        color: darkgreen;
+        font-weight: bold;
+        background-color: lightyellow;
+        padding: 5px;
+        border: 1px solid green;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exemple del Combinador de Descendents en CSS</h1>
+
+    <p><strong>Explicació del combinador de descendents:</strong></p>
+    <p>
+      El combinador de descendents (<code>&nbsp;</code>) s’utilitza quan en CSS
+      escrivim dos selectors (com <code>section</code> i <code>p</code>) un al
+      costat de l'altre amb un espai entre ells. Aquest combinador selecciona
+      els elements que són <strong>descendents</strong> del primer element.
+    </p>
+
+    <h2>Relació entre <code>section</code> i <code>p</code>:</h2>
+    <p>
+      En aquest exemple, <code>section p</code> selecciona tots els elements
+      &lt;p&gt; que es troben dins d'un element &lt;section&gt;. Això vol dir
+      que només els paràgrafs que "viuen dins" d'un &lt;section&gt; tindran el
+      fons blau; altres paràgrafs fora d'aquestes seccions no es veuran afectats
+      per aquesta regla.
+    </p>
+
+    <h2>Exemple visual de la relació:</h2>
+    <section>
+      <p>Aquest paràgraf és dins d'una secció.</p>
+    </section>
+    <p>Aquest paràgraf no és dins d'una secció.</p>
+
+    <h2>Codi CSS:</h2>
+    <pre>
+<code>section p { 
+    background-color: blue;
+}</code>
+    </pre>
+
+    <p>
+      Només el primer paràgraf tindrà el fons blau, perquè està dins del
+      &lt;section&gt;. El segon paràgraf no serà afectat per l'estil, ja que
+      està fora de la secció.
+    </p>
+
+    <p>
+      Així doncs, el combinador de descendents és útil per aplicar estils només
+      als elements que es troben en una posició específica dins de la jerarquia
+      de l'HTML.
+    </p>
+
+    <h2>Com utilitzar un atribut <code>id</code> en CSS</h2>
+    <p>Quan tenim un element HTML amb un atribut <code>id</code>, com ara:</p>
+
+    <pre><code>&lt;p id="remark"&gt;Aquest és un paràgraf especial&lt;/p&gt;</code></pre>
+
+    <p>
+      Podem referir-nos a aquest identificador en CSS fent servir el símbol de
+      la <strong>almoadilla (#)</strong> seguit de l'<code>id</code>. Això ens
+      permet aplicar estils específics a aquest element concret. En aquest cas,
+      l’estil per a l’element amb <code>id="remark"</code> es defineix com:
+    </p>
+
+    <pre><code>#remark {
+    color: darkgreen;
+    font-weight: bold;
+    background-color: lightyellow;
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 3px;
+}</code></pre>
+
+    <h2>Exemple visual:</h2>
+    <p id="remark">
+      Aquest és un paràgraf especial que utilitza l’atribut id "remark".
+    </p>
+  </body>
+</html>
