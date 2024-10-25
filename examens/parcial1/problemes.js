@@ -100,6 +100,7 @@ switch (numero22) {
     break;
 }
 
+
 // 3.- (2 punts) Escriu un programa en JavaScript que demani a l'usuari un número N i mostri a la consola tots els números de l'1 fins a N. Pots fer-ho utilitzant tant un bucle for com un bucle while.
 
 // Opció amb FOR
@@ -109,7 +110,7 @@ let nFor = parseInt(prompt("Introdueix un número N:"));
 for (let i = 1; i <= nFor; i++) {
   console.log(i);
 }
-
+// console.log(i);
 // Opció amb WHILE
 
 let nWhile = parseInt(prompt("Introdueix un número N:"));
