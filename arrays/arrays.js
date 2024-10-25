@@ -2,6 +2,7 @@ let arr1 = new Array(23, 445, 43, 77, 23);
 let arr2 = Array("zero", "u", "dos");
 let arr3 = [true, false, false, true, true];
 
+// ARRAYS
 console.log(arr1[1]);
 console.log(arr2[2]);
 console.log(arr3[2]);
