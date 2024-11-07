@@ -12,3 +12,9 @@ let persona1 = [38, "Marc", "Docent"];
 console.log("Sóc en " + persona1[1] + " i sóc " + persona1[2] + " i tinc " + persona1[0] + " anys");
 
 persona1[0]=39; // Valors de persona 1 [39, "Marc", "Docent"]
+
+let alumnes = ["Maria", "Joan", "Anna", "Pere"];
+
+for (let i = 0; i < alumnes.length; i++) {
+    console.log(alumnes[i]);
+}
