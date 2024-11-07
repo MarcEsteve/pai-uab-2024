@@ -43,6 +43,7 @@ function suma(s1, s2) {
   return laSumaEs;
 }
 
+
 let resultatPrompt;
 let sumand1 = parseInt(prompt("introdueix un valor")); //3
 let sumand2 = parseInt(prompt("introdueix un valor")); //5
