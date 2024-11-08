@@ -4,4 +4,13 @@ let arai = [];
 arai[0] = "Hola";
 arai[1] = "Adéu";
 
-// 21.2.- Al programa anterior, afegeix les instruccions necessàries (després del console.log()) per a fer el següent: ● Afegeixi el valor “Nom” a la posició 2 de la taula. ● Escrigui a la consola el contingut de la taula. ● Modifiqui el valor emmagatzemat a la posició 1 de la taula, guardant el valor “, “ ● Escrigui a la consola el contingut de la taula.
+// 21.2.- Al programa anterior, afegeix les instruccions necessàries (després del console.log()) per a fer el següent: 
+// ● Afegeixi el valor “Nom” a la posició 2 de la taula. 
+// ● Escrigui a la consola el contingut de la taula. 
+// ● Modifiqui el valor emmagatzemat a la posició 1 de la taula, guardant el valor “, “ 
+// ● Escrigui a la consola el contingut de la taula.
+
+arai[2] = "Nom";
+console.log(arai);
+arai[1]=", ";
+console.log(arai);
