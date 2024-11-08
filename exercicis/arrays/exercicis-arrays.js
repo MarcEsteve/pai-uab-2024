@@ -25,9 +25,11 @@ console.log(arai);
 let nombres = [23,45,98,73];
 console.log(nombres[0] + nombres[2]);
 nombres[6]= nombres[0] + nombres[1] + nombres[2] + nombres[3];
-console.log(nombres); //posició buida
+console.log(nombres); //posició 5ena buida
 
 // 21.4.- Fes un programa que, donat un número (que demanarem per pantalla fent servir prompt()) emmagatzemi a una taula el doble i el triple d’aquest número. Un cop fet, escriu la taula a la consola. 
+
+
 
 // 21.5.- Fes un programa que, donat dos números, que demanarem per pantalla i emmagatzemarem a dues variables, guardi a una taula els resultats de la suma, la resta, la multiplicació i la divisió dels dos valors introduïts. 
 
