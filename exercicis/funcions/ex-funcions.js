@@ -36,6 +36,8 @@ let numeroAny = parseInt(
   prompt("Introdueix un any per comprovar si és de traspàs:")
 );
 
+// let anyTraspas = esAnyDeTraspas(numeroAny); 
+
 if (esAnyDeTraspas(numeroAny)) {
   console.log(`${numeroAny} és un any de traspàs.`);
 } else {
@@ -56,12 +58,12 @@ function sumaSerie(N) {
 }
 
 // Exemple d'ús
-let N = parseInt(prompt("Introdueix un nombre enter positiu N:"));
-if (N > 0) {
-    console.log(`La suma de la sèrie per N = ${N} és: ${sumaSerie(N)}`);
-} else {
-    console.log("Introdueix un valor positiu per N.");
-}
+// let N = parseInt(prompt("Introdueix un nombre enter positiu N:"));
+// if (N > 0) {
+//     console.log(`La suma de la sèrie per N = ${N} és: ${sumaSerie(N)}`);
+// } else {
+//     console.log("Introdueix un valor positiu per N.");
+// }
 
 
 // Exercici 3.4
@@ -118,19 +120,19 @@ function calcularNotaFinal(notaAC, notaPractiques, notaExamen) {
 }
 
 // Exemple d'ús de la funció
-let notaAC = parseFloat(prompt("Introdueix la nota d'avaluació continuada:"));
-let notaPractiques = parseFloat(prompt("Introdueix la nota de pràctiques:"));
-let notaExamen = parseFloat(prompt("Introdueix la nota de l'examen:"));
+// let notaAC = parseFloat(prompt("Introdueix la nota d'avaluació continuada:"));
+// let notaPractiques = parseFloat(prompt("Introdueix la nota de pràctiques:"));
+// let notaExamen = parseFloat(prompt("Introdueix la nota de l'examen:"));
 
-console.log(calcularNotaFinal(notaAC, notaPractiques, notaExamen));
+// console.log(calcularNotaFinal(notaAC, notaPractiques, notaExamen));
 
 // Exercici 3.5
 // Hem organitzat un concurs a Twitter que consisteix en fer relats curs (màxim 280 caràcters) amb el màxim número de paraules de 5 caràcters. Per poder donar el premi, el que volem fer és classificar tots  els tuits segons el nombre de paraules de 5 caràcters que tenen i, per tant, necessitem una funció que, donada una frase, ens retorni el número de paraules de 5 caràcters que té.
 
 // Per fer aquesta funció haurem de tenir en compte que: 
 
-
 // Totes les frases acaben en un punt (.) y totes comencen sempre per una paraula. 
 // Una paraula acaba quan apareix una coma (,) o un espai en blanc. 
 // Les frases només poden tenir lletres, comes, espais en blanc y el punt final. No tindrem en compte que pugui aparèixer cap altre caràcter. 
 // Per conèixer la llargària de la frase (quants caràcters té) podem fer servir la propietat length del Strings de JavaScript (consulteu https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Str ing/length per saber com fer-la servir) 
+
