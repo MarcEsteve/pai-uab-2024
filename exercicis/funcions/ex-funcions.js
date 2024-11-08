@@ -41,3 +41,24 @@ if (esAnyDeTraspas(numeroAny)) {
 } else {
   console.log(`${numeroAny} no és un any de traspàs.`);
 }
+
+// Exercici 3.3
+// Feu un script que inclogui una funció que, donat un enter N, retorni ∑ (1 / n2 ) per a 0 < n ≤ N.
+
+function sumaSerie(N) {
+    let suma = 0;
+
+    for (let n = 1; n <= N; n++) {
+        suma += 1 / (n * n);
+    }
+
+    return suma;
+}
+
+// Exemple d'ús
+let N = parseInt(prompt("Introdueix un nombre enter positiu N:"));
+if (N > 0) {
+    console.log(`La suma de la sèrie per N = ${N} és: ${sumaSerie(N)}`);
+} else {
+    console.log("Introdueix un valor positiu per N.");
+}
