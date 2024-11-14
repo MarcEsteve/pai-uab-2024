@@ -1,4 +1,4 @@
-// 1. Objecte senzill amb propietats
+// Objecte senzill amb PROPIETATS
 
 // Definim un objecte que representa un alumne
 let alumne = {
@@ -12,22 +12,20 @@ console.log("Nom:", alumne.nom); // Accés a la propietat "nom"
 console.log("Edat:", alumne.edat); // Accés a la propietat "edat"
 console.log("Curs:", alumne.curs); // Accés a la propietat "curs"
 
-// 2. Objecte amb un mètode
+// Objecte BUIT i afegir propietats després
 
-// Objecte amb una funció (mètode) dins
-let cotxe = {
-  marca: "Toyota",
-  model: "Corolla",
-  any: 2020,
-  descripcio: function () {
-    return `Aquest cotxe és un ${this.marca} ${this.model} de l'any ${this.any}.`;
-  },
-};
+// Creem un objecte buit
+let professor = {};
 
-// Cridem el mètode de l'objecte
-console.log(cotxe.descripcio());
+// Afegim propietats a l'objecte
+professor.nom = "Laura";
+professor.assignatura = "Programació";
+professor.experiència = 10;
 
-// 3. Objecte amb modificació de propietats
+// Mostrem l'objecte
+console.log(professor);
+
+// Objecte amb modificació de propietats
 
 // Objecte que representa un llibre
 let llibre = {
@@ -72,8 +70,75 @@ console.log(miAuto);
 miAuto.marca = "Fiat"; // canviem el contingut de la propietat
 console.log(miAuto);
 
+// L'avantatge de la notació de claudàtors és que pots accedir a una propietat mitjançant el valor guardat en una variable
+
+let propietat = "precio";
+console.log(miAuto[propietat]); // Escriurà en la consola el valor de la propietat precio.
+
+//FOR que recórrer OBJECTES
 for (let i in miAuto) {
   // i anirà prenent els noms de totes les
   // propietats que tingui miAuto
   console.log(miAuto[i]); // Escriurà a la consola els valors de totes les propietats
+}
+
+//EXEMPLE COMPARACIÓ OBJECTES
+// Definimos la clase
+function Auto(marca, modelo, potencia, antiguedad, precio) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.potencia = potencia;
+    this.antiguedad = antiguedad;
+    this.precio = precio;
+}
+// Definimos dos objetos iguales
+let miAuto = new Auto("Seat","Ibiza",90,2010,5000);
+let miAuto2 = new Auto("Seat","Ibiza",90,2010,5000);
+// Los comparamos
+console.log(miAuto==miAuto2);
+// Dice que no son iguales
+// Creamos una función que compare todos los campos uno a uno
+function comparaAutos(auto1,auto2) {
+  let iguales = true;
+  for (let i in auto1) {
+    if (auto1.i != auto2.i) {
+      iguales = false;
+    }
+  }
+  return (iguales);
+}
+
+// Llamamos a la función
+console.log(comparaAutos(miAuto,miAuto2));
+
+// La función nos dice correctamente que los dos objetos tienen los mismos valores en su propiedades
+
+
+// Objecte amb un MÈTODE
+
+// Objecte amb una funció (mètode) dins
+let cotxe = {
+  marca: "Toyota",
+  model: "Corolla",
+  any: 2020,
+  descripcio: function () {
+    return `Aquest cotxe és un ${this.marca} ${this.model} de l'any ${this.any}.`;
+  },
+};
+
+// Cridem el mètode de l'objecte
+console.log(cotxe.descripcio());
+
+// Objecte dins d'un array
+
+// Llista d'objectes (alumnes)
+let alumnes = [
+  { nom: "Anna", edat: 22 },
+  { nom: "Pere", edat: 24 },
+  { nom: "Marta", edat: 20 },
+];
+
+// Recorrem l'array i mostrem la informació de cada alumne
+for (let i = 0; i < alumnes.length; i++) {
+  console.log(`Nom: ${alumnes[i].nom}, Edat: ${alumnes[i].edat}`);
 }
