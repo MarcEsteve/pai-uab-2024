@@ -93,7 +93,7 @@ function Auto(marca, modelo, potencia, antiguedad, precio) {
 }
 // Definimos dos objetos iguales
 let miAuto = new Auto("Seat", "Ibiza", 90, 2010, 5000);
-let miAuto2 = new Auto("Seat", "dsadsa", 90, 2010, 5001);
+let miAuto2 = new Auto("Seat", "Ibiza", 90, 2010, 5000);
 // Los comparamos
 console.log(miAuto == miAuto2);
 // Dice que no son iguales
@@ -101,8 +101,9 @@ console.log(miAuto == miAuto2);
 function comparaAutos(auto1, auto2) {
   let iguales = true;
   for (let i in auto2) {
-    if (auto1.i == auto2.i) {
+    if (auto1[i] != auto2[i]) {
       iguales = false;
+      break; // Atura el bucle quan trobi una diferència
     }
   }
   return iguales;
@@ -142,22 +143,24 @@ for (let i = 0; i < alumnes.length; i++) {
   console.log(`Nom: ${alumnes[i].nom}, Edat: ${alumnes[i].edat}`);
 }
 
-class Persona {
-  constructor(nom, dni, dn) {
-    // Propietats
-    this.nom = nom;
-    this.dni = dni;
-    this.dataNaix = new Date(dn);
-  }
-  // Mètodes
-  edat() {
-    let avui = new Date();
-    let edad = avui.getFullYear() - this.dataNaix.getFullYear();
-    return edad;
-  }
-  escriuNom(vegades) {
-    for (let i = 0; i < vegades; i++) {
-      console.log(this.nom);
-    }
-  }
-}
+//CLASSES
+
+// class Persona {
+//   constructor(nom, dni, dn) {
+//     // Propietats
+//     this.nom = nom;
+//     this.dni = dni;
+//     this.dataNaix = new Date(dn);
+//   }
+//   // Mètodes
+//   edat() {
+//     let avui = new Date();
+//     let edad = avui.getFullYear() - this.dataNaix.getFullYear();
+//     return edad;
+//   }
+//   escriuNom(vegades) {
+//     for (let i = 0; i < vegades; i++) {
+//       console.log(this.nom);
+//     }
+//   }
+// }
