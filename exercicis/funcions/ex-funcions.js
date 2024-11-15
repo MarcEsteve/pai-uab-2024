@@ -276,3 +276,55 @@ function elevarAPotencia(base, exponent) {
 // Cridem la funció
 // console.log(`${baseNombre} elevat a ${exponentNombre} és: ${resultatPotencia}`); 
 // Mostrem el resultat
+
+// 19.4.- Crea una funció que donat un valor en milles retorni la seva equivalència en metros.  1 milla = 1852 metros. 
+
+// Funció per convertir milles a metres
+function convertirMillesAMetres(milles) {
+  const METRES_PER_MILLA = 1852; // Constant: 1 milla = 1852 metres
+  return milles * METRES_PER_MILLA; // Multipliquem el valor en milles pels metres per milla
+}
+
+// Exemple d'ús
+// let valorMilles = parseFloat(prompt("Introdueix un valor en milles:")); 
+// Demanem el valor en milles
+// let resultatMetres = convertirMillesAMetres(valorMilles); // Cridem la funció
+// console.log(`${valorMilles} milles equivalen a ${resultatMetres} metres.`); // Mostrem el resultat
+
+// 19.5.- Crea una funció que, donat un nombre del 0 al 10 retorni una cadena de caràcters amb el nom del nombre donat.  
+// Funció per retornar el nom del nombre donat
+function nombreEnText(numero) {
+  const noms = [
+      "zero", "un", "dos", "tres", "quatre",
+      "cinc", "sis", "set", "vuit", "nou", "deu"
+  ];
+
+  if (numero >= 0 && numero <= 10) {
+      return noms[numero]; // Retornem el nom corresponent al número
+  } else {
+      return "El número no està entre 0 i 10."; // Missatge d'error
+  }
+}
+
+// Exemple d'ús
+// let numeroEntrada = parseInt(prompt("Introdueix un número entre 0 i 10:")); // Demanem el número
+// let resultatText = nombreEnText(numeroEntrada); // Cridem la funció
+// console.log(`El número ${numeroEntrada} s'escriu com: ${resultatText}`); // Mostrem el resultat
+
+// 19.6.- Crea una funció que, rebut un nombre de segons retorni una cadena de caràcters on es digui quantes hores minuts i segons són.  
+
+// Funció per convertir segons a hores, minuts i segons
+function convertirTemps(segons) {
+  let hores = Math.floor(segons / 3600); // Calculem les hores
+  let minuts = Math.floor((segons % 3600) / 60); // Calculem els minuts restants
+  let segonsRestants = segons % 60; // Calculem els segons restants
+
+  return `${hores} hores, ${minuts} minuts, ${segonsRestants} segons.`; // Retornem la cadena formatada
+}
+
+// Exemple d'ús
+// let segonsEntrada = parseInt(prompt("Introdueix un nombre de segons:")); // Demanem el nombre de segons
+// let resultatTemps = convertirTemps(segonsEntrada); // Cridem la funció
+// console.log(resultatTemps); // Mostrem el resultat
+
+// 19.7.- Crea una funció que, donades les hores treballades en una setmana i el salari brut per hora, calculi el seu salari. Si les hores treballades són més de 40, aquestes hores sobreres, es pagaran un 50% més cares que una hora normal. 
