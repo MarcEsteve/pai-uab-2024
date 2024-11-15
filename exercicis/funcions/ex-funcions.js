@@ -193,10 +193,43 @@ function comptarParaulesDeLongitud(frase, longitud) {
 }
 
 // Exemple d'ús
-const frase = "Aquestes paraules tenen diferents longituds, oi? algunes si tenen 7";
-const longitud = 7; // Aquesta setmana busquem paraules de 7 lletres
-const resultat = comptarParaulesDeLongitud(frase, longitud);
-console.log(`La frase conté ${resultat} paraules de ${longitud} lletres.`);
+// const frase = "Aquestes paraules tenen diferents longituds, oi? algunes si tenen 7";
+// const longitud = 7; // Aquesta setmana busquem paraules de 7 lletres
+// const resultat = comptarParaulesDeLongitud(frase, longitud);
+// console.log(`La frase conté ${resultat} paraules de ${longitud} lletres.`);
 
 // Exercici 3.7 
 // Un conegut que ha vist els nostres concursos ens ha preguntat com ho fem per comptar les paraules d’un determinat número de lletres. Un cop l’hem explicat ens ha demanat si li podíem fer una funció que, donada una frase, ens retorni a una taula quantes paraules hi ha amb 1, 2, 3, 4, 5, 6 o 7 lletres.
+
+function comptarParaulesPerLongitud(frase) {
+  let comptadors = [0, 0, 0, 0, 0, 0, 0]; // Taula per comptar paraules de longituds 1 a 7
+  let paraulaActual = ""; // Variable temporal per construir cada paraula
+
+  // Recorrem tota la frase
+  for (let i = 0; i < frase.length; i++) {
+      const car = frase[i]; // Agafem el caràcter actual
+
+      if (car === " " || car === "," || car === ".") {
+          // Si trobem un separador (espai, coma, punt)
+          if (paraulaActual.length >= 1 && paraulaActual.length <= 7) {
+              // Si la paraula està dins del rang 1-7, incrementem el comptador corresponent
+              comptadors[paraulaActual.length - 1]++;
+          }
+          paraulaActual = ""; // Reiniciem la paraula actual
+      } else {
+          // Si no és un separador, afegim el caràcter a la paraula actual
+          paraulaActual += car;
+      }
+  }
+
+  return comptadors; // Retornem la taula de comptadors
+}
+
+// Exemple d'ús
+const frase = "Avui és un dia preciós, amb moltes coses per fer.";
+const resultats = comptarParaulesPerLongitud(frase);
+
+// Mostrem el resultat
+for (let i = 0; i < resultats.length; i++) {
+  console.log(`Paraules amb ${i + 1} lletres: ${resultats[i]}`);
+}
