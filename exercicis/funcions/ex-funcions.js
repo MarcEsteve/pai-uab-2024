@@ -226,10 +226,53 @@ function comptarParaulesPerLongitud(frase) {
 }
 
 // Exemple d'ús
-const frase = "Avui és un dia preciós, amb moltes coses per fer.";
-const resultats = comptarParaulesPerLongitud(frase);
+// const frase = "Avui és un dia preciós i amb molta tasca per fer abans del cap de setmana.";
+// const resultats = comptarParaulesPerLongitud(frase);
 
 // Mostrem el resultat
-for (let i = 0; i < resultats.length; i++) {
-  console.log(`Paraules amb ${i + 1} lletres: ${resultats[i]}`);
+// for (let i = 0; i < resultats.length; i++) {
+//   console.log(`Paraules amb ${i + 1} lletres: ${resultats[i]}`);
+// }
+
+// 19.1.- Crea una funció que rebi un nombre i retorni aquest nombre elevat al quadrat.
+
+// Definició de la funció
+function elevarQuadrat(nombre) {
+  return nombre * nombre; // Multipliquem el nombre per ell mateix
 }
+
+// Exemple d'ús
+// let num = parseFloat(prompt("Introdueix un número:")); // Demanem un número a l'usuari
+// let resultat = elevarQuadrat(num); // Cridem la funció
+// console.log(`El quadrat de ${num} és: ${resultat}`); // Mostrem el resultat
+
+// 19.2.- Crea una funció que rebi un nombre i retorni aquest nombre elevat al cub. 
+
+// Funció per elevar un nombre al cub
+function elevarCub(valor) {
+  return valor * valor * valor; // Multipliquem el valor per ell mateix tres vegades
+  // return Math.pow(valor, 3); // Elevem el nombre a la potència 3 amb mètode Math-pow(,)
+}
+
+// Exemple d'ús
+// let numCub = parseFloat(prompt("Introdueix un número per elevar-lo al cub:")); 
+// Demanem un número a l'usuari
+// let resultatCub = elevarCub(numCub); // Cridem la funció
+// console.log(`El cub de ${numCub} és: ${resultatCub}`); // Mostrem el resultat
+
+// 19.3.- Crea una funció que rebi dos nombres i retorni el primer nombre elevat al segon.  
+
+// Funció per elevar el primer nombre al segon
+function elevarAPotencia(base, exponent) {
+  return Math.pow(base, exponent); // Elevem la base a l'exponent
+}
+
+// Exemple d'ús
+// let baseNombre = parseFloat(prompt("Introdueix el primer número (base):")); 
+// Demanem la base a l'usuari
+// let exponentNombre = parseFloat(prompt("Introdueix el segon número (exponent):")); 
+// Demanem l'exponent
+// let resultatPotencia = elevarAPotencia(baseNombre, exponentNombre); 
+// Cridem la funció
+// console.log(`${baseNombre} elevat a ${exponentNombre} és: ${resultatPotencia}`); 
+// Mostrem el resultat
