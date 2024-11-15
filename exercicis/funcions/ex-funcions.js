@@ -136,3 +136,35 @@ function calcularNotaFinal(notaAC, notaPractiques, notaExamen) {
 // Les frases només poden tenir lletres, comes, espais en blanc y el punt final. No tindrem en compte que pugui aparèixer cap altre caràcter. 
 // Per conèixer la llargària de la frase (quants caràcters té) podem fer servir la propietat length del Strings de JavaScript (consulteu https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Str ing/length per saber com fer-la servir) 
 
+function comptarParaulesDeCincCaracters(frase) {
+  let paraulesDeCinc = 0; // Comptador per a paraules de 5 caràcters
+  let paraulaActual = ""; // Variable temporal per construir cada paraula
+
+  // Recorrem tota la frase
+  for (let i = 0; i < frase.length; i++) {
+      const car = frase[i]; // Agafem el caràcter actual
+
+      if (car === " " || car === "," || car === ".") {
+          // Si trobem un espai, una coma o un punt, hem acabat una paraula
+          if (paraulaActual.length === 5) {
+              // Si la paraula té exactament 5 caràcters, incrementem el comptador
+              paraulesDeCinc++;
+          }
+          paraulaActual = ""; // Reiniciem la paraula actual
+      } else {
+          // Si no és un separador, afegim el caràcter a la paraula actual
+          paraulaActual += car;
+      }
+  }
+
+  return paraulesDeCinc; // Retornem el nombre de paraules de 5 caràcters
+}
+
+// Exemple d'ús
+const frase = "Hola, avui tenim una gran festa de cine.";
+const resultat = comptarParaulesDeCincCaracters(frase);
+console.log(`La frase conté ${resultat} paraules de 5 caràcters.`);
+
+//SEGONA PART
+
+
