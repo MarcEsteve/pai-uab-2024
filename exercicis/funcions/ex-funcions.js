@@ -32,17 +32,17 @@ function esAnyDeTraspas(any) {
 
 // Exemple d'ús
 // "numeroAny" és un argument per DONAR el valor a la funció
-let numeroAny = parseInt(
-  prompt("Introdueix un any per comprovar si és de traspàs:")
-);
+// let numeroAny = parseInt(
+//   prompt("Introdueix un any per comprovar si és de traspàs:")
+// );
 
 // let anyTraspas = esAnyDeTraspas(numeroAny); 
 
-if (esAnyDeTraspas(numeroAny)) {
-  console.log(`${numeroAny} és un any de traspàs.`);
-} else {
-  console.log(`${numeroAny} no és un any de traspàs.`);
-}
+// if (esAnyDeTraspas(numeroAny)) {
+//   console.log(`${numeroAny} és un any de traspàs.`);
+// } else {
+//   console.log(`${numeroAny} no és un any de traspàs.`);
+// }
 
 // Exercici 3.3
 // Feu un script que inclogui una funció que, donat un enter N, retorni ∑ (1 / n2 ) per a 0 < n ≤ N.
@@ -161,10 +161,42 @@ function comptarParaulesDeCincCaracters(frase) {
 }
 
 // Exemple d'ús
-const frase = "Hola, avui tenim una gran festa de cine.";
-const resultat = comptarParaulesDeCincCaracters(frase);
-console.log(`La frase conté ${resultat} paraules de 5 caràcters.`);
+// const frase = "Hola, avui tenim una gran festa de cine.";
+// const resultat = comptarParaulesDeCincCaracters(frase);
+// console.log(`La frase conté ${resultat} paraules de 5 caràcters.`);
 
-//SEGONA PART
+//Exercici 3.6
+// A partir de l’experiència del concurs anterior hem decidir fer un concurs semblant cada setmana. Però cada setmana volem comptar paraules amb diferents números de lletres. Així aquesta setmana seran paraules de 7 lletres, la setmana vinent de 4 i l’altre de 3. Què cal modificar a la funció per a que puguem fer servir la mateixa funció totes les setmanes? 
 
+function comptarParaulesDeLongitud(frase, longitud) {
+  let comptador = 0; // Comptador de paraules amb la longitud desitjada
+  let paraulaActual = ""; // Variable temporal per construir cada paraula
 
+  // Recorrem tota la frase
+  for (let i = 0; i < frase.length; i++) {
+      const car = frase[i]; // Agafem el caràcter actual
+
+      if (car === " " || car === "," || car === ".") {
+          // Si trobem un espai, una coma o un punt, hem acabat una paraula
+          if (paraulaActual.length === longitud) {
+              // Si la paraula té la longitud desitjada, incrementem el comptador
+              comptador++;
+          }
+          paraulaActual = ""; // Reiniciem la paraula actual
+      } else {
+          // Si no és un separador, afegim el caràcter a la paraula actual
+          paraulaActual += car;
+      }
+  }
+
+  return comptador; // Retornem el nombre de paraules amb la longitud desitjada
+}
+
+// Exemple d'ús
+const frase = "Aquestes paraules tenen diferents longituds, oi? algunes si tenen 7";
+const longitud = 7; // Aquesta setmana busquem paraules de 7 lletres
+const resultat = comptarParaulesDeLongitud(frase, longitud);
+console.log(`La frase conté ${resultat} paraules de ${longitud} lletres.`);
+
+// Exercici 3.7 
+// Un conegut que ha vist els nostres concursos ens ha preguntat com ho fem per comptar les paraules d’un determinat número de lletres. Un cop l’hem explicat ens ha demanat si li podíem fer una funció que, donada una frase, ens retorni a una taula quantes paraules hi ha amb 1, 2, 3, 4, 5, 6 o 7 lletres.
