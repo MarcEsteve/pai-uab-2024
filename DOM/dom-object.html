@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecte Document</title>
+</head>
+<body>
+    <!-- Enllaços -->
+    <p>Lorem ipsum dolor sit amet, <a href="http://www.uab.cat">consectetuer adipiscing elit</a>. 
+       Sed mattis enim vitae orci. Phasellus <a href="http://www.uab.cat/biblioteques">Fusce porta</a>.</p>
+
+    <!-- Formulari -->
+    <form id="formulari" action="enviar.html">
+        <input type="text" name="nom" placeholder="Nom">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Imatges -->
+    <img src="ciutat_vella.jpg" alt="Ciutat Vella" width="200">
+    <img src="ciutat_sostenible.jpg" alt="Ciutat Sostenible" width="200">
+
+    <!-- Scripts -->
+    <script src="script1.js"></script>
+    <script>
+        console.log("Bloc script embegut");
+    </script>
+
+    <!-- Embed -->
+    <embed src="exemple.pdf" type="application/pdf" width="400" height="200">
+
+    <script>
+        // Exemple amb 'links'
+        console.log("Total d'enllaços:", document.links.length);
+        console.log("Segon enllaç:", document.links[1].href); // Mostra l'enllaç http://www.uab.cat/biblioteques
+
+        // Exemple amb 'anchors'
+        console.log("Total d'ancles:", document.anchors.length);
+
+        // Exemple amb 'forms'
+        console.log("Total de formularis:", document.forms.length);
+        console.log("Acció del formulari:", document.forms[0].action); // Mostra "enviar.html"
+
+        // Exemple amb 'images'
+        console.log("Total d'imatges:", document.images.length);
+        console.log("Primera imatge:", document.images[0].src); // Mostra l'URL de la primera imatge
+
+        // Exemple amb 'scripts'
+        console.log("Total de scripts:", document.scripts.length);
+        console.log("Últim script:", document.scripts[document.scripts.length - 1].src || "Bloc embegut"); 
+
+        // Exemple amb 'embeds'
+        console.log("Total d'embeds:", document.embeds.length);
+        console.log("Primer embed:", document.embeds[0].src); // Mostra "exemple.pdf"
+    </script>
+</body>
+</html>

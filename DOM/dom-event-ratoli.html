@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaccionar a esdeveniments</title>
+</head>
+<body>
+    <p id="ratolisobre"></p>
+    <button onmouseover="mostrarMissatge()">Passa el ratolí per aquí</button>
+
+    <script>
+        function mostrarMissatge() {
+            document.getElementById("ratolisobre").innerHTML = "Estàs passant el ratolí pel botó!";
+            console.log("Estàs passant el ratolí pel botó!");
+        }
+    </script>
+</body>
+</html>

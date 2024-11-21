@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afegir elements</title>
+</head>
+<body>
+    <ul id="llista">
+        <li>Barcelona</li>
+        <li>València</li>
+    </ul>
+    <button onclick="afegirElement()">Afegir Sevilla</button>
+
+    <script>
+        function afegirElement() {
+            let llista = document.getElementById("llista");
+            let novaCiutat = document.createElement("li");
+            novaCiutat.innerText = "Sevilla";
+            llista.appendChild(novaCiutat);
+        }
+    </script>
+</body>
+</html>
