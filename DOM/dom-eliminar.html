@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar elements</title>
+</head>
+<body>
+    <div id="bloc">
+        <p>Aquest paràgraf serà eliminat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus, eos tempore corrupti veniam, totam iste commodi illum voluptate architecto qui eum tempora! Consequuntur odio repudiandae pariatur quod laborum sequi.</p>
+    </div>
+    <button onclick="eliminarElement()">Elimina el bloc DIV</button>
+
+    <script>
+        function eliminarElement() {
+            let bloc = document.getElementById("bloc");
+            bloc.remove();
+        }
+    </script>
+</body>
+</html>
