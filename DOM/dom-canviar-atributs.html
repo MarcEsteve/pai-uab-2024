@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvi d'atributs</title>
+</head>
+<body>
+    <img id="imatge" src="ciutat_vella.jpg" alt="Ciutat vella" width="300">
+    <button onclick="canviarImatge()">Canvia la imatge</button>
+
+    <script>
+        function canviarImatge() {
+            let imatge = document.getElementById("imatge");
+            imatge.src = "ciutat_sostenible.jpg";
+            imatge.alt = "Ciutat sostenible";
+        }
+    </script>
+</body>
+</html>
