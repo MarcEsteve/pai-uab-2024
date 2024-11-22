@@ -1,17 +1,38 @@
 /****** Exercici 5.1 ******/
-// a.	Número d'enllaços que hi ha a la pàgina
+
+
+// Opció a: Número d'enllaços que hi ha a la pàgina
 function e51a() {
-  alert("hola");
+  const numEnllacos = document.links.length;
+  alert(`Número d'enllaços a la pàgina: ${numEnllacos}`);
 }
 
-// b.	Adreça (URL) del penúltim enllaç
-function e51b() {}
+// Opció b: Adreça (URL) del penúltim enllaç
+function e51b() {
+  const numEnllacos = document.links.length;
+  if (numEnllacos >= 2) {
+      const penultimEnllac = document.links[numEnllacos - 2].href;
+      alert(`URL del penúltim enllaç: ${penultimEnllac}`);
+  } else {
+      alert("No hi ha prou enllaços per mostrar el penúltim.");
+  }
+}
 
-//c.	Numero d'enllaços que ho fan a http://www.uab.cat
-function e51c() {}
+// Opció c: Número d'enllaços que apunten a http://www.uab.cat
+function e51c() {
+  const uabEnllacos = Array.from(document.links).filter(enllac => enllac.href === "http://www.uab.cat/").length;
+  alert(`Número d'enllaços que apunten a http://www.uab.cat: ${uabEnllacos}`);
+}
 
-//d.	Número d'enllaços al tercer paràgraf.
-function e51d() {}
+// Opció d: Número d'enllaços al tercer paràgraf
+function e51d() {
+  const tercerParagraf = document.getElementById("aquest");
+  const enllacosTercerParagraf = tercerParagraf.getElementsByTagName("a").length;
+  alert(`Número d'enllaços al tercer paràgraf: ${enllacosTercerParagraf}`);
+}
+
+
+
 /****** Exercici 5.2 ******/
 // a. Al final de dels paràgrafs existents.
 function e52a() {}
