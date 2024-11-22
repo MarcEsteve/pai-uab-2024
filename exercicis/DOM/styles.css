@@ -56,15 +56,24 @@ ul#llista {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
+    list-style: none; /* Treure els punts */
 }
 
 ul#llista li {
     margin: 5px 0;
-    padding: 5px;
+    padding: 10px;
     background-color: #f1f8fe;
     border: 1px solid #cce7f7;
     border-radius: 3px;
+    font-size: 16px;
+    text-align: left; /* Assegura l'alineació a l'esquerra */
+    color: #333;
 }
+
+ul#llista li:hover {
+    background-color: #dbefff; /* Color més clar en passar el ratolí */
+}
+
 
 /* Botons */
 button {
