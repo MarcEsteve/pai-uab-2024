@@ -11,47 +11,47 @@ body {
 /* Encapçalaments */
 h1 {
     text-align: center;
-    background-color: #004b87;
+    background-color: #007236; /* Verd corporatiu UAB */
     color: white;
     padding: 20px;
-    margin: 0;
+    margin: 0 0 20px;
 }
 
 h2 {
-    color: #004b87;
-    margin-top: 20px;
-    text-align: center;
+    color: #007236; /* Verd corporatiu UAB */
+    margin: 20px 40px; /* Més espai lateral */
+    text-align: left; /* Aliniació a l'esquerra */
 }
 
 h3 {
-    margin-top: 15px;
-    color: #0056a6;
+    margin: 15px 40px; /* Més espai lateral */
+    color: #A25127; /* Marró corporatiu UAB */
 }
 
 /* Paràgrafs */
 p {
-    margin: 10px 20px;
+    margin: 10px 40px; /* Més espai lateral */
     background-color: white;
     padding: 10px;
-    border-left: 5px solid #004b87;
+    border-left: 5px solid #007236; /* Verd corporatiu UAB */
     border-radius: 5px;
 }
 
 /* Paràgrafs destacats */
 .parell {
     background-color: #eaf6fc;
-    border-left-color: #0056a6;
+    border-left-color: #A25127; /* Marró corporatiu UAB */
 }
 
 #aquest {
     font-weight: bold;
     background-color: #dff7e1;
-    border-left-color: #008000;
+    border-left-color: #007236; /* Verd corporatiu UAB */
 }
 
 /* Llista */
 ul#llista {
-    margin: 20px;
+    margin: 20px 40px; /* Més espai lateral */
     padding: 10px;
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -68,18 +68,18 @@ ul#llista li {
 
 /* Botons */
 button {
-    background-color: #004b87;
+    background-color: #007236; /* Verd corporatiu UAB */
     color: white;
     border: none;
     padding: 10px 15px;
-    margin: 5px;
+    margin: 10px 40px; /* Espai lateral ajustat */
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
 
 button:hover {
-    background-color: #0056a6;
+    background-color: #A25127; /* Marró corporatiu UAB */
 }
 
 /* Amagar paràgraf */
