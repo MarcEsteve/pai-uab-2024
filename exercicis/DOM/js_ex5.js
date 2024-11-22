@@ -24,6 +24,17 @@ function e51c() {
   alert(`Número d'enllaços que apunten a http://www.uab.cat: ${uabEnllacos}`);
 }
 
+//  5.1C Amb condicionals i bucles senzills sense filter()
+
+let uabEnllacos = 0; // Comptador inicialitzat a 0
+for (let i = 0; i < document.links.length; i++) { // Iterem per tots els enllaços
+    if (document.links[i].href === "http://www.uab.cat/") { // Comprovem si l'enllaç apunta a uab.cat
+        uabEnllacos++; // Si és així, incrementem el comptador
+    }
+}
+alert(`Número d'enllaços que apunten a http://www.uab.cat: ${uabEnllacos}`);
+
+
 // Opció d: Número d'enllaços al tercer paràgraf
 function e51d() {
   const tercerParagraf = document.getElementById("aquest");
