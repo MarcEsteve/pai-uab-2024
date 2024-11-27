@@ -13,8 +13,8 @@ function parellSenar(nombre) {
 
 // "nombre" és un parámetre per REBRE el valor de l'argument
 
-// let numeroEnter = parseInt(prompt("Introdueix un nombre enter, si us plau"));
-// console.log(parellSenar(numeroEnter));
+let numeroEnter = parseInt(prompt("Introdueix un nombre enter, si us plau"));
+console.log(parellSenar(numeroEnter));
 
 // "numeroEnter" és un argument per ENVIAR el valor a la funció a través del paràmetre
 

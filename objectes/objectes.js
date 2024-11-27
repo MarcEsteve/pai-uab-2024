@@ -20,7 +20,7 @@ let professor = {};
 // Afegim propietats a l'objecte
 professor.nom = "Laura";
 professor.assignatura = "Programació";
-professor.experiència = 10;
+professor.experiencia = 10;
 
 // Mostrem l'objecte
 // console.log(professor);
@@ -31,7 +31,7 @@ professor.experiència = 10;
 let llibre = {
   titol: "El petit príncep",
   autor: "Antoine de Saint-Exupéry",
-  preu: 15,
+  preu: 15
 };
 
 // Modifiquem el preu del llibre
@@ -42,20 +42,23 @@ llibre.preu = 12;
 //   `Llibre: ${llibre.titol}, Autor: ${llibre.autor}, Preu actualitzat: ${llibre.preu}€`
 // );
 
+// Equival·lent amb concatenació
+// console.log("Llibre de preu: " + llibre.preu + "€");
+
 // Objectes. Funció constructora
 
-function Persona(nom, dni, dn) {
-  this.nom = nom;
-  this.dni = dni;
-  this.dataNaix = new Date(dn);
-}
+// function Persona(nom, dni, dn) {
+//   this.nom = nom;
+//   this.dni = dni;
+//   this.dataNaix = new Date(dn);
+// }
 
-let persona1 = new Persona(
-  "Cristina Casanova Esteve",
-  "52535948W",
-  "2002/04/28"
-);
-let persona2 = new Persona("Andreu Oliveres Martí", "55214587T", "2002/02/03");
+// let persona1 = new Persona(
+//   "Cristina Casanova Esteve",
+//   "52535948W",
+//   "2002/04/28"
+// );
+// let persona2 = new Persona("Andreu", "55214587T", "2002/02/03");
 
 // function Auto(marca, modelo, potencia, antiguedad, precio) {
 //   this.marca = marca;
@@ -95,7 +98,7 @@ function Auto(marca, modelo, potencia, antiguedad, precio) {
 let miAuto = new Auto("Seat", "Ibiza", 90, 2010, 5000);
 let miAuto2 = new Auto("Seat", "Ibiza", 90, 2010, 5000);
 // Los comparamos
-console.log(miAuto == miAuto2);
+// console.log(miAuto == miAuto2);
 // Dice que no son iguales
 // Creamos una función que compare todos los campos uno a uno
 function comparaAutos(auto1, auto2) {
@@ -110,7 +113,7 @@ function comparaAutos(auto1, auto2) {
 }
 
 // Llamamos a la función
-console.log(comparaAutos(miAuto, miAuto2));
+// console.log(comparaAutos(miAuto, miAuto2));
 
 // La función nos dice correctamente que los dos objetos tienen los mismos valores en su propiedades
 
@@ -127,7 +130,10 @@ let cotxe = {
 };
 
 // Cridem el mètode de l'objecte
-console.log(cotxe.descripcio());
+// console.log(cotxe.descripcio());
+
+//Equivalència
+// console.log(`Aquest cotxe és un ${cotxe.marca} ${cotxe.model} de l'any ${cotxe.any}.`);
 
 // Objecte dins d'un array
 
@@ -139,9 +145,9 @@ let alumnes = [
 ];
 
 // Recorrem l'array i mostrem la informació de cada alumne
-for (let i = 0; i < alumnes.length; i++) {
-  console.log(`Nom: ${alumnes[i].nom}, Edat: ${alumnes[i].edat}`);
-}
+// for (let i = 0; i < alumnes.length; i++) {
+//   console.log(`Nom: ${alumnes[i].nom}, Edat: ${alumnes[i].edat}`);
+// }
 
 //CLASSES
 
@@ -164,3 +170,110 @@ for (let i = 0; i < alumnes.length; i++) {
 //     }
 //   }
 // }
+// console.log(new Date());
+
+// Crear objectes de la classe Persona
+let persona1 = new Persona("Anna Martí", "12345678A", "1990-05-15");
+let persona2 = new Persona("Joan López", "87654321B", "1985-11-20");
+
+// Utilitzar el mètode edat()
+console.log(`L'edat de ${persona1.nom} és: ${persona1.edat()} anys.`);
+console.log(`L'edat de ${persona2.nom} és: ${persona2.edat()} anys.`);
+
+// Utilitzar el mètode escriuNom()
+console.log("Nom d'Anna repetit 3 vegades:");
+persona1.escriuNom(3);
+
+console.log("Nom de Joan repetit 5 vegades:");
+persona2.escriuNom(5);
+
+//Getters i Setters
+
+// Getter per obtenir el nom
+class Persona {
+  constructor(nom, dni, dn) {
+    this._nom = nom; // Propietats privades (amb _)
+    this._dni = dni;
+    this._dataNaix = new Date(dn);
+  }
+
+  // Getter per obtenir el nom
+  get nom() {
+    return this._nom;
+  }
+
+  // Setter per modificar el nom
+  set nom(nouNom) {
+    if (nouNom.length > 0) {
+      this._nom = nouNom;
+    } else {
+      console.error("El nom no pot estar buit.");
+    }
+  }
+
+  // Getter per obtenir el DNI
+  get dni() {
+    return this._dni;
+  }
+
+  // Setter per modificar el DNI
+  set dni(nouDni) {
+    if (nouDni.match(/^\d{8}[A-Z]$/)) {
+      this._dni = nouDni;
+    } else {
+      console.error("El DNI no és vàlid. Ha de tenir 8 números seguits d'una lletra.");
+    }
+  }
+
+  // Getter per obtenir la data de naixement
+  get dataNaix() {
+    return this._dataNaix;
+  }
+
+  // Setter per modificar la data de naixement
+  set dataNaix(novaDataNaix) {
+    const novaData = new Date(novaDataNaix);
+    if (!isNaN(novaData.getTime())) {
+      this._dataNaix = novaData;
+    } else {
+      console.error("La data de naixement no és vàlida.");
+    }
+  }
+
+  // Mètode per calcular l'edat
+  edat() {
+    let avui = new Date();
+    let edad = avui.getFullYear() - this._dataNaix.getFullYear();
+    if (
+      avui.getMonth() < this._dataNaix.getMonth() ||
+      (avui.getMonth() === this._dataNaix.getMonth() && avui.getDate() < this._dataNaix.getDate())
+    ) {
+      edad--;
+    }
+    return edad;
+  }
+
+  // Mètode per escriure el nom diverses vegades
+  escriuNom(vegades) {
+    for (let i = 0; i < vegades; i++) {
+      console.log(this._nom);
+    }
+  }
+}
+
+// Exemple d'ús
+let persona = new Persona("Maria Soler", "12345678Z", "1995-10-25");
+
+console.log(persona.nom); // Accedir al nom amb el getter
+persona.nom = "Joana Puig"; // Modificar el nom amb el setter
+console.log(persona.nom);
+
+console.log(persona.dni); // Accedir al DNI amb el getter
+persona.dni = "87654321X"; // Modificar el DNI amb el setter
+console.log(persona.dni);
+
+console.log(`Edat: ${persona.edat()} anys`); // Calcular l'edat
+
+// Provar d'escriure el nom 3 vegades
+persona.escriuNom(3);
+

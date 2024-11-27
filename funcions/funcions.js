@@ -29,7 +29,8 @@ saludarAlumne("Joan", "Marc");
 // En aquest exemple, la funció calcula el doble d’un nombre i retorna el resultat.
 
 function calcularDoble(num) {
-  return num * 2;
+  let doble = num * 2;
+  return doble;
 }
 
 // Utilitzem la funció i emmagatzemem el resultat en una variable
