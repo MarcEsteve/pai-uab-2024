@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canviar Color</title>
+</head>
+<body>
+    <h1>Canviar color de fons</h1>
+    <form id="formulariColor">
+        <label for="color">Escriu un color (ex: red, blue, green):</label>
+        <input type="text" id="color" name="color">
+        <button type="button" onclick="canviarColor()">Canvia el color</button>
+    </form>
+
+    <script>
+        function canviarColor() {
+            const color = document.getElementById("color").value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

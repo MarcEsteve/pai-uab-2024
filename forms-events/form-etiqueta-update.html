@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualitzar Text</title>
+</head>
+<body>
+    <h1>Actualitzar etiqueta</h1>
+    <form>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" oninput="actualitzaEtiqueta()">
+    </form>
+    <p id="etiqueta">Hola, ...!</p>
+
+    <script>
+        function actualitzaEtiqueta() {
+            const nom = document.getElementById("nom").value;
+            document.getElementById("etiqueta").textContent = `Hola, ${nom}!`;
+        }
+    </script>
+</body>
+</html>

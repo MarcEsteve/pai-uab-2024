@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularis i Esdeveniments</title>
+</head>
+<body>
+    <h1>Formulari de contacte</h1>
+    <form id="formulariContacte">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById("formulariContacte").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evitem que la pàgina es recarregui
+            const nom = document.getElementById("nom").value;
+            const email = document.getElementById("email").value;
+            alert(`Gràcies, ${nom}. T'enviarem un correu a ${email}.`);
+        });
+    </script>
+</body>
+</html>

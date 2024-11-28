@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validació de formulari</title>
+</head>
+<body>
+    <h1>Validació de formulari</h1>
+    <form id="formulariValidacio">
+        <label for="edat">Edat:</label>
+        <input type="number" id="edat" name="edat"><br><br>
+        <button type="submit">Comprova edat</button>
+    </form>
+
+    <script>
+        document.getElementById("formulariValidacio").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const edat = document.getElementById("edat").value;
+            if (edat >= 18) {
+                alert("Ets major d'edat.");
+            } else if (edat > 0) {
+                alert("Ets menor d'edat.");
+            } else {
+                alert("Introdueix una edat vàlida.");
+            }
+        });
+    </script>
+</body>
+</html>
