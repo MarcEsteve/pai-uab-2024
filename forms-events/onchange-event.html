@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple onchange</title>
+</head>
+<body>
+    <h1>Esdeveniment onchange</h1>
+    <label for="colors">Selecciona un color:</label>
+    <select id="colors" onchange="alert(`Has seleccionat el color: ${this.value}`)">
+        <option value="Vermell">Vermell</option>
+        <option value="Blau">Blau</option>
+        <option value="Verd">Verd</option>
+    </select>
+</body>
+</html>

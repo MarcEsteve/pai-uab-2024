@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulari</title>
+  </head>
+  <body>
+    <!-- <form action="" name="formu"> 
+      <label for="firstname">First name:</label><br />
+      <input type="text" id="firstname" name="firstname" value="Mickey" />
+      <br />
+      <label for="lastname"> Last name:</label><br />
+      <input type="text" id="lastname" name="lastname" value="Mouse" />
+      <br />
+     <label for="">Correu</label><br />
+      <input type="email" name="correu" id="correu"> 
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br /><br /> 
+    <form name="formulari" id="formulari">
+      <input type="text" name="element" id="element" />
+    </form>-->
+    <form name="formu">
+      <!-- <label for="firtname">First name:</label><br /> -->
+      <input
+        type="text"
+        id="firstname"
+        name="firstname"
+        placeholder="Escriu el teu nom"
+      />
+      <br />
+      <label for="lastname">Last name:</label><br />
+      <input
+        type="text"
+        id="lastname"
+        size="30"
+        name="lastname"
+        value="Cognoms"
+      />
+      <br />
+      <label for="obs">Observations</label><br />
+      <textarea name="obs" id="obs">Observacions. dsad sa da..</textarea>
+    </form>
+
+    <p>
+      Observa que l'amplada per defecte del camp de text és de 20 caràcters.
+    </p>
+
+    <form>
+      <input type="radio" name="pregunta" value="si" id="preg_si" />
+      Sí<br />
+      <input type="radio" name="pregunta" value="no" id="preg_no" /> No<br />
+      <input type="radio" name="pregunta" value="nosap" id="preg_nsnc" /> NS/NC
+    </form>
+
+    <form name="myForm">
+      <input type="checkbox" name="bike" value="bike" checked />I have a bike
+      <br />
+      <input type="checkbox" name="car" value="car" />I have a car
+    </form>
+
+    <select id="opcions" name="opcions">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    <script src="formularis.js"></script>
+  </body>
+</html>
