@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercici de DOM</title>
+	<script type="text/javascript" SRC="js1.js"></script>
+
+<style type="text/css">
+#mensaje {
+    width: 200px;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid #323232;
+    padding: 0.5em;
+	background-color:#B7B7B7;
+	visibility: hidden;
+}
+	p b {
+		color: blue;
+		cursor: help;
+	}
+</style>
+</head>
+
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu ex et tortor convallis pretium sit 
+	amet sit amet quam. Vestibulum eu ipsum magna. Suspendisse scelerisque massa at feugiat condimentum. Morbi 
+	nibh metus, vestibulum sed arcu eu, sollicitudin mollis purus. Donec nibh ligula, interdum vel magna ut, 
+	rutrum aliquet nibh. Ut felis quam, laoreet<b onMouseOver="veure()" onMouseOut="amagar()">(i) </b><spam id="mensaje">Aquest és un missatge informatiu 
+	que posarem dins d'una caixa i que només es veurà si ens posem sobre el lloc adequat</spam> 
+	nec dapibus nec, rhoncus vel risus. Aenean id massa ut 
+	lacus porttitor egestas. Aenean ligula libero, gravida commodo risus quis, aliquet volutpat turpis. 
+	Nulla eu justo eget mi mattis ornare nec ac purus. Duis sem ex, aliquam a gravida ut, facilisis et 
+	lacus. Phasellus maximus scelerisque nibh ac ultrices. Pellentesque eu quam et nulla dictum feugiat.</p>
+	
+	<p>Integer pretium <strong>a orci quis</strong> fringilla. Vivamus aliquam sem pellentesque, 
+	dignissim dolor eu, tempus sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac 
+	turpis egestas. <strong>Curabitur sagittis</strong> elit at sapien ultrices dignissim. Duis lobortis libero 
+	eget malesuada lobortis. Donec varius, sem at ultrices dapibus, nisi tellus laoreet tortor, elementum ornare 
+	lectus nulla ac nibh. Quisque finibus bibendum orci sit amet malesuada. Nullam nisi nunc, blandit eu semper ac, 
+	porttitor aliquam purus.</p>
+</body>
+</html>
