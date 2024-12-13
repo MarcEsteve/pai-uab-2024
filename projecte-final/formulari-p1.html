@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulari de Validació</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Formulari de Validació</h1>
+  <form id="formulari">
+    <!-- Nom i cognoms -->
+    <label for="nom">Nom i Cognoms:</label>
+    <input type="text" id="nom" placeholder="Nom i Cognoms">
+    <p id="error-nom" class="error"></p>
+
+    <!-- Rang d'edats -->
+    <label for="edat">Rang d'edats:</label>
+    <select id="edat">
+      <option value="">Selecciona una opció</option>
+      <option value="0-17">0-17</option>
+      <option value="18-25">18-25</option>
+      <option value="26-40">26-40</option>
+      <option value="41-55">41-55</option>
+      <option value="56-65">56-65</option>
+      <option value="65+">Més de 65</option>
+    </select>
+    <p id="error-edat" class="error"></p>
+
+    <!-- Codi postal -->
+    <label for="codi-postal">Codi Postal:</label>
+    <input type="text" id="codi-postal" maxlength="5" placeholder="12345">
+    <p id="error-codi" class="error"></p>
+
+    <!-- Correu electrònic -->
+    <label for="email">Correu electrònic:</label>
+    <input type="email" id="email" placeholder="exemple@correu.cat">
+    <p id="error-email" class="error"></p>
+
+    <!-- Contrasenya -->
+    <label for="contrasenya">Contrasenya:</label>
+    <input type="password" id="contrasenya" placeholder="Contrasenya">
+    <input type="checkbox" id="mostrar-contrasenya"> Mostra la contrasenya
+    <p id="error-contrasenya" class="error"></p>
+
+    <!-- Confirmar contrasenya -->
+    <label for="confirmar-contrasenya">Confirma la Contrasenya:</label>
+    <input type="password" id="confirmar-contrasenya" placeholder="Confirma la Contrasenya">
+    <input type="checkbox" id="mostrar-confirmar"> Mostra la contrasenya
+    <p id="error-confirmar" class="error"></p>
+
+    <!-- Checkbox de privacitat -->
+    <label>
+      <input type="checkbox" id="privacitat"> Accepto la política de privacitat
+    </label>
+    <p id="error-privacitat" class="error"></p>
+
+    <!-- Botons -->
+    <button type="button" id="esborrar">Esborrar</button>
+    <button type="button" id="enviar">Enviar</button>
+
+    <!-- Resultat -->
+    <p id="resultat"></p>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
