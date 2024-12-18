@@ -34,7 +34,7 @@ function calcularDoble(num) {
 }
 
 // Utilitzem la funció i emmagatzemem el resultat en una variable
-let resultat = calcularDoble(5);
+let resultat = calcularDoble(5); //=10
 console.log("El doble de 5 és: " + resultat);
 
 // Exemple de assignació amb variables no constants

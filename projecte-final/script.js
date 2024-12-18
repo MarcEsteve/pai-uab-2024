@@ -1,5 +1,7 @@
 document.getElementById("enviar").addEventListener("click", validarFormulari);
-document.getElementById("esborrar").addEventListener("click", esborrarFormulari);
+document
+  .getElementById("esborrar")
+  .addEventListener("click", esborrarFormulari);
 
 // Validacions
 function validarFormulari() {
@@ -7,7 +9,9 @@ function validarFormulari() {
 
   // Nom i Cognoms
   const nom = document.getElementById("nom");
-  if (!nom.value.match(/^[A-ZÀ-ÖØ-Ý][a-zà-öø-ý]*(\s[A-ZÀ-ÖØ-Ý][a-zà-öø-ý]*)+$/)) {
+  if (
+    !nom.value.match(/^[A-ZÀ-ÖØ-Ý][a-zà-öø-ý]*(\s[A-ZÀ-ÖØ-Ý][a-zà-öø-ý]*)+$/)
+  ) {
     document.getElementById("error-nom").textContent = "Escriviu un nom vàlid.";
     errors = true;
   } else {
@@ -17,7 +21,8 @@ function validarFormulari() {
   // Rang d'edats
   const edat = document.getElementById("edat");
   if (edat.value === "") {
-    document.getElementById("error-edat").textContent = "Seleccioneu un rang d'edat.";
+    document.getElementById("error-edat").textContent =
+      "Seleccioneu un rang d'edat.";
     errors = true;
   } else {
     document.getElementById("error-edat").textContent = "";
@@ -26,7 +31,8 @@ function validarFormulari() {
   // Codi Postal
   const codi = document.getElementById("codi-postal");
   if (!codi.value.match(/^\d{5}$/)) {
-    document.getElementById("error-codi").textContent = "Escriviu un codi postal vàlid.";
+    document.getElementById("error-codi").textContent =
+      "Escriviu un codi postal vàlid.";
     errors = true;
   } else {
     document.getElementById("error-codi").textContent = "";
@@ -35,7 +41,8 @@ function validarFormulari() {
   // Correu Electrònic
   const email = document.getElementById("email");
   if (!email.value.match(/^[^@]+@[^@]+\.[a-z]{2,}$/i)) {
-    document.getElementById("error-email").textContent = "Escriviu un correu vàlid.";
+    document.getElementById("error-email").textContent =
+      "Escriviu un correu vàlid.";
     errors = true;
   } else {
     document.getElementById("error-email").textContent = "";
@@ -43,8 +50,13 @@ function validarFormulari() {
 
   // Contrasenya
   const contrasenya = document.getElementById("contrasenya");
-  if (!contrasenya.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/)) {
-    document.getElementById("error-contrasenya").textContent = "Contrasenya no vàlida.";
+  if (
+    !contrasenya.value.match(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/
+    )
+  ) {
+    document.getElementById("error-contrasenya").textContent =
+      "Contrasenya no vàlida.";
     errors = true;
   } else {
     document.getElementById("error-contrasenya").textContent = "";
@@ -53,7 +65,8 @@ function validarFormulari() {
   // Confirmar Contrasenya
   const confirmar = document.getElementById("confirmar-contrasenya");
   if (confirmar.value !== contrasenya.value) {
-    document.getElementById("error-confirmar").textContent = "Les contrasenyes no coincideixen.";
+    document.getElementById("error-confirmar").textContent =
+      "Les contrasenyes no coincideixen.";
     errors = true;
   } else {
     document.getElementById("error-confirmar").textContent = "";
@@ -62,7 +75,8 @@ function validarFormulari() {
   // Privacitat
   const privacitat = document.getElementById("privacitat");
   if (!privacitat.checked) {
-    document.getElementById("error-privacitat").textContent = "Accepteu la política de privacitat.";
+    document.getElementById("error-privacitat").textContent =
+      "Accepteu la política de privacitat.";
     errors = true;
   } else {
     document.getElementById("error-privacitat").textContent = "";
@@ -70,7 +84,8 @@ function validarFormulari() {
 
   // Resultat
   if (!errors) {
-    document.getElementById("resultat").textContent = "Formulari enviat correctament!";
+    document.getElementById("resultat").textContent =
+      "Formulari enviat correctament!";
   } else {
     document.getElementById("resultat").textContent = "";
   }
@@ -79,5 +94,20 @@ function validarFormulari() {
 // Esborrar formulari
 function esborrarFormulari() {
   document.getElementById("formulari").reset();
-  document.querySelectorAll(".error").forEach(error => error.textContent = "");
+  document
+    .querySelectorAll(".error")
+    .forEach((error) => (error.textContent = ""));
+}
+
+function formatMajuscules() {
+  const input = document.getElementById("nomCognoms");
+  const paraules = input.value.split(" "); // Separem cada paraula
+  for (let i = 0; i < paraules.length; i++) {
+    if (paraules[i].length > 0) {
+      // Posem la primera lletra en majúscula i la resta en minúscula
+      paraules[i] =
+        paraules[i][0].toUpperCase() + paraules[i].slice(1).toLowerCase();
+    }
+  }
+  input.value = paraules.join(" "); // Reassignem el valor al camp
 }
