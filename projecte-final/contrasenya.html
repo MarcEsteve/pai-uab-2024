@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validació de Contrasenya</title>
+</head>
+<body>
+    <h1>Validació de Contrasenya</h1>
+
+    <label for="contrasenya">Contrasenya:</label>
+    <input type="password" id="contrasenya" placeholder="Escriu la teva contrasenya" onblur="validarContrasenya()">
+    <input type="checkbox" id="mostrar-contrasenya" onchange="mostrarContrasenya()"> Mostra la contrasenya
+    <p id="error-contrasenya" class="error"></p>
+
+    <script src="validaciocontrasenya.js"></script>
+</body>
+</html>
