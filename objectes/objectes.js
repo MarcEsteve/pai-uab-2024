@@ -1,10 +1,13 @@
 // Objecte senzill amb PROPIETATS
 
 // Definim un objecte que representa un alumne
-let alumne = {
+let alumne;
+
+alumne = {
   nom: "Joan",
   edat: 20,
   curs: "PAI",
+  aprovat: true
 };
 
 // Mostrem les propietats de l'objecte a la consola
@@ -33,6 +36,14 @@ let llibre = {
   autor: "Antoine de Saint-Exupéry",
   preu: 15
 };
+
+// "Error" perque falta preu
+// let llibre2 = {
+//   titol: "El petit príncep",
+//   autor: "Antoine de Saint-Exupéry"
+// };
+
+// console.log(llibre);
 
 // Modifiquem el preu del llibre
 llibre.preu = 12;
@@ -67,16 +78,17 @@ llibre.preu = 12;
 //   this.antiguedad = antiguedad;
 //   this.precio = precio;
 // }
-// let miAuto = new Auto("Seat", "Ibiza", 90, 2010, 5000);
+// let miAuto = new Auto("fdsfdsf", "Ibiza", 90, 2010, 0);
 // let otroAuto = new Auto("Opel", "Astra", 92, 1995, 500);
 // console.log(miAuto);
+// miAuto.precio = 5000;
 // miAuto.marca = "Fiat"; // canviem el contingut de la propietat
 // console.log(miAuto);
 
 // L'avantatge de la notació de claudàtors és que pots accedir a una propietat mitjançant el valor guardat en una variable
 
-let propietat = "precio";
-// console.log(miAuto[propietat]); // Escriurà en la consola el valor de la propietat precio.
+// let propietat = "precio";
+// console.log(miAuto[propietat]); // Escriurà en la consola el valor de la propietat precio. Equivalent miAuto.precio
 
 //FOR que recórrer OBJECTES
 // for (let i in miAuto) {
@@ -87,30 +99,30 @@ let propietat = "precio";
 
 //EXEMPLE COMPARACIÓ OBJECTES
 // Definimos la clase
-function Auto(marca, modelo, potencia, antiguedad, precio) {
-  this.marca = marca;
-  this.modelo = modelo;
-  this.potencia = potencia;
-  this.antiguedad = antiguedad;
-  this.precio = precio;
-}
+// function Auto(marca, modelo, potencia, antiguedad, precio) {
+//   this.marca = marca;
+//   this.modelo = modelo;
+//   this.potencia = potencia;
+//   this.antiguedad = antiguedad;
+//   this.precio = precio;
+// }
 // Definimos dos objetos iguales
-let miAuto = new Auto("Seat", "Ibiza", 90, 2010, 5000);
-let miAuto2 = new Auto("Seat", "Ibiza", 90, 2010, 5000);
+// let miAuto = new Auto("Seat", "Ibiza", 90, 2010, 5000);
+// let miAuto2 = new Auto("Seat", "Ibiza", 90, 2010, 5000);
 // Los comparamos
 // console.log(miAuto == miAuto2);
 // Dice que no son iguales
 // Creamos una función que compare todos los campos uno a uno
-function comparaAutos(auto1, auto2) {
-  let iguales = true;
-  for (let i in auto2) {
-    if (auto1[i] != auto2[i]) {
-      iguales = false;
-      break; // Atura el bucle quan trobi una diferència
-    }
-  }
-  return iguales;
-}
+// function comparaAutos(auto1, auto2) {
+//   let iguales = true;
+//   for (let i in auto2) {
+//     if (auto1[i] != auto2[i]) {
+//       iguales = false;
+//       break; // Atura el bucle quan trobi una diferència
+//     }
+//   }
+//   return iguales;
+// }
 
 // Llamamos a la función
 // console.log(comparaAutos(miAuto, miAuto2));
@@ -120,14 +132,14 @@ function comparaAutos(auto1, auto2) {
 // Objecte amb un MÈTODE
 
 // Objecte amb una funció (mètode) dins
-let cotxe = {
-  marca: "Toyota",
-  model: "Corolla",
-  any: 2020,
-  descripcio: function () {
-    return `Aquest cotxe és un ${this.marca} ${this.model} de l'any ${this.any}.`;
-  },
-};
+// let cotxe = {
+//   marca: "Toyota",
+//   model: "Corolla",
+//   any: 2020,
+//   descripcio: function () {
+//     return `Aquest cotxe és un ${this.marca} ${this.model} de l'any ${this.any}.`;
+//   }
+// };
 
 // Cridem el mètode de l'objecte
 // console.log(cotxe.descripcio());
@@ -150,7 +162,6 @@ let alumnes = [
 // }
 
 //CLASSES
-
 // class Persona {
 //   constructor(nom, dni, dn) {
 //     // Propietats
@@ -173,19 +184,19 @@ let alumnes = [
 // console.log(new Date());
 
 // Crear objectes de la classe Persona
-let persona1 = new Persona("Anna Martí", "12345678A", "1990-05-15");
-let persona2 = new Persona("Joan López", "87654321B", "1985-11-20");
+// let persona1 = new Persona("Anna Martí", "12345678A", "1990-05-15");
+// let persona2 = new Persona("Joan López", "87654321B", "1985-11-20");
 
 // Utilitzar el mètode edat()
-console.log(`L'edat de ${persona1.nom} és: ${persona1.edat()} anys.`);
-console.log(`L'edat de ${persona2.nom} és: ${persona2.edat()} anys.`);
+// console.log(`L'edat de ${persona1.nom} és: ${persona1.edat()} anys.`);
+// console.log(`L'edat de ${persona2.nom} és: ${persona2.edat()} anys.`);
 
 // Utilitzar el mètode escriuNom()
-console.log("Nom d'Anna repetit 3 vegades:");
-persona1.escriuNom(3);
+// console.log("Nom d'Anna repetit 3 vegades:");
+// persona1.escriuNom(3);
 
-console.log("Nom de Joan repetit 5 vegades:");
-persona2.escriuNom(5);
+// console.log("Nom de Joan repetit 5 vegades:");
+// persona2.escriuNom(5);
 
 //Getters i Setters
 
@@ -264,13 +275,15 @@ class Persona {
 // Exemple d'ús
 let persona = new Persona("Maria Soler", "12345678Z", "1995-10-25");
 
-console.log(persona.nom); // Accedir al nom amb el getter
+console.log(persona.nom()); // Accedir al nom amb el getter
 persona.nom = "Joana Puig"; // Modificar el nom amb el setter
-console.log(persona.nom);
+console.log(persona.nom());
+persona.nom("Pedro");
+console.log(persona.nom());
 
-console.log(persona.dni); // Accedir al DNI amb el getter
+console.log(persona.dni()); // Accedir al DNI amb el getter
 persona.dni = "87654321X"; // Modificar el DNI amb el setter
-console.log(persona.dni);
+console.log(persona.dni());
 
 console.log(`Edat: ${persona.edat()} anys`); // Calcular l'edat
 
